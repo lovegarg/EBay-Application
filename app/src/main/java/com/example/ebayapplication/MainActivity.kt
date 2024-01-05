@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
 
         val viewModel = ViewModelProvider(this).get(EarthquakeViewModel::class.java)
         viewModel.getData.observe(this, Observer {newData ->
-            Log.e("Test", "newData "+newData.size)
+            Log.e("Test", "newData "+newData.earthquakes.size)
         })
 
         viewModel.fetchData()
